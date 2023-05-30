@@ -9,6 +9,7 @@ mod summary;
 
 fn main() {
     let mut siv = cursive::default();
+    siv.add_global_callback('q', |s| s.quit());
     let welcome_dialog = Dialog::text("A random wiki a day makes an erudite mind someday.")
         .title("Random wiki")
         .button("Quit", |s| s.quit())
